@@ -1,5 +1,17 @@
 # IMA2 Character Studio
 
+## macOS (experimental community installer)
+
+This release is officially distributed for Windows. An experimental macOS installer is available in [macos/install.sh](macos/install.sh). It downloads the official 0.1.4 Windows release, checks its SHA-256 digest, and adapts its Electron app locally; application source is not included in this repository. This is not an official macOS release and image generation has not yet been verified end to end.
+
+Requirements: macOS, Node.js 22 or newer, npm, and a working macOS `codex` CLI on your PATH. From a checkout of this repository, run:
+
+```sh
+bash macos/install.sh
+```
+
+Then open `~/Applications/HERA-Character-Mac/HERA 시작.command`. The app uses its own Codex login and stores its library under `~/Library/Application Support/IMA2 Character Studio`. Its Codex app-server communicates over standard input/output; it does not provide a web URL. The installer refuses to overwrite an existing installation. It has been smoke-tested on Apple Silicon; Intel Macs and login/image generation remain unverified.
+
 [Windows 설치 파일 다운로드](https://github.com/babicat4242-svg/ima2-character-studio-downloads/releases/latest)
 
 Windows 10/11 64비트용 캐릭터 시트 앱입니다. 설치 파일만 다운로드하면 됩니다. Node.js, Git, Codex 별도 설치는 필요 없습니다.
